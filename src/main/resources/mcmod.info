@@ -1,0 +1,16 @@
+[
+{
+  "modid": "pp",
+  "name": "Project Penguin",
+  "description": "It adds animals. Like penguins",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["spjoes/DonutUnicorns"],
+  "credits": "McVinnyq for models (some models date back to around 2018)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
