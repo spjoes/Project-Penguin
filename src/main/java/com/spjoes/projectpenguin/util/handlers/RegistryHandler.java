@@ -22,6 +22,8 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void onModelRegister(ModelRegistryEvent event) {
 
+        RenderHandler.registerEntityRenders();
+
         for(Item item : ItemInit.ITEMS){
             if(item instanceof IHasModel) {
                 ((IHasModel)item).registerModels();
@@ -33,7 +35,6 @@ public class RegistryHandler {
     public static void preInitRegistries() {
 
         EntityInit.registerEntities();
-        RenderHandler.registerEntityRenders();
 
     }
 

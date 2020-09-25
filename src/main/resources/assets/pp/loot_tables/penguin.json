@@ -1,0 +1,32 @@
+{
+    "pools": [
+        {
+            "name": "PenguinMain",
+            "rolls": {
+                "min": 1,
+                "max": 4
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 3,
+                    "name": "pp:penguin_meat"
+                }
+            ]
+        },
+        {
+            "name": "PenguinSpecial",
+            "rolls": {
+                "min": 1,
+                "max": 2
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 2,
+                    "name": "pp:penguin_fur"
+                }
+            ]
+        }
+    ]
+}
