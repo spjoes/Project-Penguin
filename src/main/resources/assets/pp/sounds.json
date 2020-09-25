@@ -1,0 +1,22 @@
+{
+  "entity.penguin.ambient":
+  {
+    "category": "entity",
+    "subtitle": "entity.penguin.ambient",
+    "sounds": [{"name": "pp:entity/penguin/ambient", "stream": true}]
+  },
+
+  "entity.penguin.hurt":
+  {
+    "category": "entity",
+    "subtitle": "entity.penguin.hurt",
+    "sounds": [{"name": "pp:entity/penguin/hurt", "stream": true}]
+  },
+
+  "entity.penguin.death":
+  {
+    "category": "entity",
+    "subtitle": "entity.penguin.death",
+    "sounds": [{"name": "pp:entity/penguin/death", "stream": true}]
+  }
+}

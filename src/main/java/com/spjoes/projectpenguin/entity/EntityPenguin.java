@@ -3,6 +3,7 @@ package com.spjoes.projectpenguin.entity;
 
 import com.google.common.collect.Sets;
 import com.spjoes.projectpenguin.util.handlers.LootTableHandler;
+import com.spjoes.projectpenguin.util.handlers.SoundsHandler;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityPolarBear;
@@ -56,16 +57,16 @@ public class EntityPenguin extends EntityPolarBear {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return super.getAmbientSound();
+        return SoundsHandler.ENTITY_PENGUIN_AMBIENT;
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return super.getHurtSound(source);
+        return SoundsHandler.ENTITY_PENGUIN_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return super.getDeathSound();
+        return SoundsHandler.ENTITY_PENGUIN_DEATH;
     }
 }
