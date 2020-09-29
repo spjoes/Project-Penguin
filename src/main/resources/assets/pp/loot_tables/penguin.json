@@ -4,12 +4,13 @@
             "name": "PenguinMain",
             "rolls": {
                 "min": 1,
-                "max": 4
+                "max": 1
             },
             "entries": [
                 {
                     "type": "item",
                     "weight": 3,
+
                     "name": "pp:penguin_meat"
                 }
             ]

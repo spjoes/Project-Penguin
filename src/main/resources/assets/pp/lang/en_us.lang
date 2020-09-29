@@ -1,5 +1,24 @@
 item.omlet.name=Penguin Omlet
 item.penguin_fur.name=Penguin Fur
 item.penguin_meat.name=Penguin Meat
+item.cooked_penguin_meat.name=Cooked Penguin Meat
+item.penguin_sword.name=Penguin Sword
+item.penguin_hamburger.name=Penguin Burger
+item.tab_icon.name=Project Penguin Creative Tab Icon
+item.half_penguin_egg.name=Top Half Of A Penguin Egg
+item.half_penguin_egg_bottom.name=Bottom Half Of A Penguin Egg
+
+item.helmet_fur.name=Fur Helmet
+item.chestplate_fur.name=Fur Chestplate
+item.leggings_fur.name=Fur Leggings
+item.boots_fur.name=Fur Boots
+
+tile.penguin_egg.name=Penguin Egg
 
 entity.penguin.name=Penguin
+
+entity.penguin.ambient=Penguin Talking
+entity.penguin.hurt=Penguin Hurt
+entity.penguin.death=Penguin Died
+
+itemGroup.pptab=Project Penguin

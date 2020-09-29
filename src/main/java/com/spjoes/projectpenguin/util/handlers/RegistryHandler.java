@@ -3,6 +3,7 @@ package com.spjoes.projectpenguin.util.handlers;
 
 import com.spjoes.projectpenguin.init.*;
 import com.spjoes.projectpenguin.util.IHasModel;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -20,6 +21,12 @@ public class RegistryHandler {
     }
 
     @SubscribeEvent
+    public static void registerBlocks(RegistryEvent.Register<Block> event)
+    {
+        event.getRegistry().registerAll(BlockInit.BLOCKS.toArray(new Block[0]));
+    }
+
+    @SubscribeEvent
     public static void onModelRegister(ModelRegistryEvent event) {
 
         RenderHandler.registerEntityRenders();
@@ -27,6 +34,14 @@ public class RegistryHandler {
         for(Item item : ItemInit.ITEMS){
             if(item instanceof IHasModel) {
                 ((IHasModel)item).registerModels();
+            }
+        }
+
+        for(Block block : BlockInit.BLOCKS)
+        {
+            if(block instanceof IHasModel)
+            {
+                ((IHasModel)block).registerModels();
             }
         }
 
@@ -41,6 +56,7 @@ public class RegistryHandler {
 
     public static void initRegistries() {
         SoundsHandler.registerSounds();
+        SmeltingInit.init();
     }
 
 

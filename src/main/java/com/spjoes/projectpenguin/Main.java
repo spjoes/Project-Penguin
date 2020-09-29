@@ -1,8 +1,10 @@
 package com.spjoes.projectpenguin;
 
+import com.spjoes.projectpenguin.creativetabs.PPTab;
 import com.spjoes.projectpenguin.proxy.CommonProxy;
 import com.spjoes.projectpenguin.util.Reference;
 import com.spjoes.projectpenguin.util.handlers.RegistryHandler;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.*;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -13,6 +15,8 @@ public class Main {
 
     @Instance
     public static Main instance;
+
+    public static final CreativeTabs PPTAB = new PPTab();
 
     @SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.SERVER)
     public static CommonProxy proxy;

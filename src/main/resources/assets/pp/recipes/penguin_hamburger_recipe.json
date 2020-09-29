@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "aaa",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:bread"
+    },
+    "a":
+    {
+      "item": "pp:cooked_penguin_meat"
+    }
+  },
+  "result":
+  {
+    "item": "pp:penguin_hamburger",
+    "count": 1
+  }
+}

@@ -14,7 +14,7 @@ public class ItemCustomFood extends ItemFood implements IHasModel
         super(amount, isWolfFood);
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.FOOD);
+        setCreativeTab(Main.PPTAB);
 
         ItemInit.ITEMS.add(this);
 

@@ -1,0 +1,9 @@
+{
+  "variants":
+  {
+    "normal":
+    {
+      "model": "pp:penguin_egg"
+    }
+  }
+}

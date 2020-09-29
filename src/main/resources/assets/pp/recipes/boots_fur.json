@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "   ",
+    "x x",
+    "x x"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "pp:penguin_fur"
+    }
+  },
+  "result":
+  {
+    "item": "pp:boots_fur",
+    "count": 1
+  }
+}
