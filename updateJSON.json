@@ -1,7 +1,7 @@
 {
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/project-penguin",
-  "<mcversion>": {
-    "<modversion>": "Please check the curseforge for what has been added to the mod", 
+  "3.0": {
+    "3.0": "Please check the curseforge for what has been added to the mod", 
   },
   "promos": {
     "1.12.2-latest": "3.0",
