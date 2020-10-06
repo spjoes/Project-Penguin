@@ -1,10 +1,10 @@
 {
-  "homepage": "<homepage/download page for your mod>",
+  "homepage": "https://www.curseforge.com/minecraft/mc-mods/project-penguin/files",
   "<mcversion>": {
-    "<modversion>": "<changelog for this version>", 
+    "<modversion>": "Please check the curseforge for what has been added to the mod", 
   },
   "promos": {
-    "<mcversion>-latest": "<modversion>",
-    "<mcversion>-recommended": "<modversion>",
+    "1.12.2-latest": "3.0",
+    "1.12.2-recommended": "3.0",
   }
 }
