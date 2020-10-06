@@ -3,20 +3,12 @@ package com.spjoes.projectpenguin.objects.items.tools;
 import com.spjoes.projectpenguin.Main;
 import com.spjoes.projectpenguin.init.ItemInit;
 import com.spjoes.projectpenguin.util.IHasModel;
-import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import net.minecraft.stats.StatList;
-import net.minecraft.world.World;
 
-public class ToolSwordBase extends ItemSword implements IHasModel
+public class ToolCheeseBat extends ItemSword implements IHasModel
 {
-    public ToolSwordBase(String name, ToolMaterial material, CreativeTabs tab)
+    public ToolCheeseBat(String name, ToolMaterial material, CreativeTabs tab)
     {
         super(material);
         setUnlocalizedName(name);
@@ -25,6 +17,16 @@ public class ToolSwordBase extends ItemSword implements IHasModel
 
         ItemInit.ITEMS.add(this);
     }
+
+//    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving)
+//    {
+//        if (entityLiving instanceof EntityPlayer && !((EntityPlayer)entityLiving).capabilities.isCreativeMode)
+//        {
+//            stack.shrink(1);
+//        }
+//
+//        return stack.isEmpty() ? new ItemStack(Items.STICK) : stack;
+//    }
 
     @Override
     public void registerModels()

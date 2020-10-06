@@ -12,5 +12,8 @@ public class Reference {
 
 
     public static final int ENTITY_PENGUIN = 120;
+    public static final int ENTITY_FOREST_PENGUIN = 121;
+    public static final int ENTITY_STICK_BUG = 122;
+    // public static final int ENTITY_SEAL = 121;
 }
 

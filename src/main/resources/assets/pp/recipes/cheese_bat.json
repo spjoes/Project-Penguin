@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " x ",
+    " x ",
+    " / "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "pp:cheese"
+    },
+    "/":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "pp:cheese_bat",
+    "count": 1
+  }
+}

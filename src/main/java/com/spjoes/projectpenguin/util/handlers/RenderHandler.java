@@ -1,11 +1,9 @@
 package com.spjoes.projectpenguin.util.handlers;
 
-import com.spjoes.projectpenguin.entity.EntityPenguin;
-import com.spjoes.projectpenguin.entity.render.RenderPenguin;
-import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraftforge.fml.client.registry.IRenderFactory;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import com.spjoes.projectpenguin.entity.*;
+import com.spjoes.projectpenguin.entity.render.*;
+import net.minecraft.client.renderer.entity.*;
+import net.minecraftforge.fml.client.registry.*;
 
 public class RenderHandler {
 
@@ -17,6 +15,24 @@ public class RenderHandler {
             public Render<? super EntityPenguin> createRenderFor(RenderManager manager)
             {
                 return new RenderPenguin(manager);
+            }
+        });
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityForestPenguin.class, new IRenderFactory<EntityForestPenguin>()
+        {
+            @Override
+            public Render<? super EntityForestPenguin> createRenderFor(RenderManager manager)
+            {
+                return new RenderForestPenguin(manager);
+            }
+        });
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityStickBug.class, new IRenderFactory<EntityStickBug>()
+        {
+            @Override
+            public Render<? super EntityStickBug> createRenderFor(RenderManager manager)
+            {
+                return new RenderStickBug(manager);
             }
         });
     }

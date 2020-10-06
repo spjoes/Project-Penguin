@@ -1,12 +1,11 @@
 package com.spjoes.projectpenguin.init;
 
 import com.spjoes.projectpenguin.Main;
-import com.spjoes.projectpenguin.entity.EntityPenguin;
+import com.spjoes.projectpenguin.entity.*;
 import com.spjoes.projectpenguin.util.Reference;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.entity.*;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 import static com.spjoes.projectpenguin.util.Reference.MODID;
@@ -15,6 +14,12 @@ public class EntityInit
 {
     public static void registerEntities() {
         registerEntity("penguin", EntityPenguin.class, Reference.ENTITY_PENGUIN, 50, 16513532, 16488035);
+
+
+        // uncomment these to enable Forest Penguins and Bone Bugs (Stick Bugs)
+
+//         registerEntity("stick_bug", EntityStickBug.class, Reference.ENTITY_STICK_BUG, 50, 16777215, 15266301);
+//         registerEntity("forest_penguin", EntityForestPenguin.class, Reference.ENTITY_FOREST_PENGUIN, 50, 2273300, 2253332);
         addSpawns();
     }
 

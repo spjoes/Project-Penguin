@@ -3,21 +3,27 @@ package com.spjoes.projectpenguin.entity;
 
 import com.google.common.collect.Sets;
 import com.spjoes.projectpenguin.init.BlockInit;
-import com.spjoes.projectpenguin.util.handlers.*;
-import net.minecraft.entity.*;
+import com.spjoes.projectpenguin.util.handlers.LootTableHandler;
+import com.spjoes.projectpenguin.util.handlers.SoundsHandler;
+import net.minecraft.entity.EntityAgeable;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityPolarBear;
-import net.minecraft.entity.player.*;
+import net.minecraft.entity.passive.EntityCow;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Items;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
-import java.util.*;
+import java.util.Set;
+import java.util.UUID;
 
-public class EntityPenguin extends EntityPolarBear {
+public class EntityStickBug extends EntityCow {
 
 
     private static final Set<Item> TEMPTATION_ITEMS = Sets.newHashSet(Items.FISH);
@@ -26,9 +32,9 @@ public class EntityPenguin extends EntityPolarBear {
 
 
 
-    public EntityPenguin(World worldIn) {
+    public EntityStickBug(World worldIn) {
         super(worldIn);
-        this.setSize(0.9F, 1.2F);
+        this.setSize(0.8F, 0.5F);
     }
 
     @Override
@@ -162,12 +168,13 @@ public class EntityPenguin extends EntityPolarBear {
     @Override
     protected void initEntityAI(){
         this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(2, new EntityAIMate(this, 1.25D));
-        this.tasks.addTask(3, new EntityAITempt(this, 0.8D, Items.FISH, false));
-        this.tasks.addTask(4, new EntityAIFollowParent(this, 0.9D));
+        this.tasks.addTask(1, new EntityAIPanic(this, 2.0D));
+        this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
+        this.tasks.addTask(3, new EntityAITempt(this, 1.25D, Items.APPLE, false));
+        this.tasks.addTask(4, new EntityAIFollowParent(this, 1.25D));
+        this.tasks.addTask(5, new EntityAIWanderAvoidWater(this, 1.0D));
         this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
-        this.tasks.addTask(5, new EntityAILookIdle(this));
-        this.tasks.addTask(7, new EntityAIWander(this, 0.6D));
+        this.tasks.addTask(7, new EntityAILookIdle(this));
     }
 
     @Override
@@ -184,8 +191,8 @@ public class EntityPenguin extends EntityPolarBear {
 
 
     @Override
-    public EntityPolarBear createChild(EntityAgeable ageable) {
-        return new EntityPenguin(this.world);
+    public EntityCow createChild(EntityAgeable ageable) {
+        return new EntityStickBug(this.world);
     }
 
     public float getEyeHeight()

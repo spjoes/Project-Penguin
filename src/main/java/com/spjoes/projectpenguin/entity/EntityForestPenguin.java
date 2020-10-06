@@ -3,21 +3,26 @@ package com.spjoes.projectpenguin.entity;
 
 import com.google.common.collect.Sets;
 import com.spjoes.projectpenguin.init.BlockInit;
-import com.spjoes.projectpenguin.util.handlers.*;
-import net.minecraft.entity.*;
+import com.spjoes.projectpenguin.util.handlers.LootTableHandler;
+import com.spjoes.projectpenguin.util.handlers.SoundsHandler;
+import net.minecraft.entity.EntityAgeable;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
 import net.minecraft.entity.monster.EntityPolarBear;
-import net.minecraft.entity.player.*;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Items;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
-import java.util.*;
+import java.util.Set;
+import java.util.UUID;
 
-public class EntityPenguin extends EntityPolarBear {
+public class EntityForestPenguin extends EntityPolarBear {
 
 
     private static final Set<Item> TEMPTATION_ITEMS = Sets.newHashSet(Items.FISH);
@@ -26,7 +31,7 @@ public class EntityPenguin extends EntityPolarBear {
 
 
 
-    public EntityPenguin(World worldIn) {
+    public EntityForestPenguin(World worldIn) {
         super(worldIn);
         this.setSize(0.9F, 1.2F);
     }
@@ -183,9 +188,10 @@ public class EntityPenguin extends EntityPolarBear {
 
 
 
+
     @Override
     public EntityPolarBear createChild(EntityAgeable ageable) {
-        return new EntityPenguin(this.world);
+        return new EntityForestPenguin(this.world);
     }
 
     public float getEyeHeight()
@@ -212,5 +218,4 @@ public class EntityPenguin extends EntityPolarBear {
     protected SoundEvent getDeathSound() {
         return SoundsHandler.ENTITY_PENGUIN_DEATH;
     }
-
 }

@@ -7,6 +7,9 @@ item.penguin_hamburger.name=Penguin Burger
 item.tab_icon.name=Project Penguin Creative Tab Icon
 item.half_penguin_egg.name=Top Half Of A Penguin Egg
 item.half_penguin_egg_bottom.name=Bottom Half Of A Penguin Egg
+item.cheese.name=Cheese
+item.cheese_bat.name=Cheese Bat
+item.lettuce.name=Lettuce
 
 item.helmet_fur.name=Fur Helmet
 item.chestplate_fur.name=Fur Chestplate
@@ -14,8 +17,12 @@ item.leggings_fur.name=Fur Leggings
 item.boots_fur.name=Fur Boots
 
 tile.penguin_egg.name=Penguin Egg
+tile.incubator_empty.name=Incubator
 
 entity.penguin.name=Penguin
+entity.forest_penguin.name=Forest Penguin
+entity.stick_bug.name=Bone Bug
+entity.seal.name=Seal
 
 entity.penguin.ambient=Penguin Talking
 entity.penguin.hurt=Penguin Hurt

@@ -4,9 +4,8 @@ import com.spjoes.projectpenguin.Main;
 import com.spjoes.projectpenguin.objects.armour.ArmourBase;
 import com.spjoes.projectpenguin.objects.items.*;
 import com.spjoes.projectpenguin.objects.items.food.ItemCustomFood;
-import com.spjoes.projectpenguin.objects.items.tools.ToolSwordBase;
+import com.spjoes.projectpenguin.objects.items.tools.*;
 import com.spjoes.projectpenguin.util.Reference;
-import net.minecraft.block.Block;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.*;
@@ -21,6 +20,7 @@ public class ItemInit {
 
     //Tool Materials
     public static final Item.ToolMaterial PENGUIN_TOOL = EnumHelper.addToolMaterial("penguin_tool", 2, 250, 1.5f, 1.5f, 10);
+    public static final Item.ToolMaterial CHEESE_TOOL = EnumHelper.addToolMaterial("cheese_tool", 0, 40, 1.3F, -1.5F, 25);
     public static final ItemArmor.ArmorMaterial ARMOUR_FUR = EnumHelper.addArmorMaterial("armour_fur", Reference.MODID + ":fur", 3, new int[]{1, 3, 1, 2}, 17, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F);
 
 
@@ -36,10 +36,13 @@ public class ItemInit {
     public static final Item COOKED_PENGUIN_MEAT = new ItemCustomFood("cooked_penguin_meat", 6, true);
     public static final Item OMLET = new ItemCustomFood("omlet", 4, false);
     public static final Item PENGUIN_HAMBURGER = new ItemCustomFood("penguin_hamburger", 9, false);
+    public static final Item LETTUCE = new ItemCustomFood("lettuce", 2, false);
+    public static final Item CHEESE = new ItemCustomFood("cheese", 2, false);
 
 
     //tools
     public static final Item PENGUIN_SWORD = new ToolSwordBase("penguin_sword", PENGUIN_TOOL, Main.PPTAB);
+    public static final Item CHEESE_BAT = new ToolCheeseBat("cheese_bat", CHEESE_TOOL, Main.PPTAB);
 
     //Armor
     public static final Item HELMET_FUR = new ArmourBase("helmet_fur", ARMOUR_FUR, 1, EntityEquipmentSlot.HEAD);

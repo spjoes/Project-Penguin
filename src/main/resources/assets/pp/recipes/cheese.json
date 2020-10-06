@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "   ",
+    "xxx",
+    "   "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result":
+  {
+    "item": "pp:cheese",
+    "count": 1
+  }
+}

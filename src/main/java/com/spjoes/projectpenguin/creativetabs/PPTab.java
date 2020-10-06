@@ -1,6 +1,5 @@
 package com.spjoes.projectpenguin.creativetabs;
 
-
 import com.spjoes.projectpenguin.init.ItemInit;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;

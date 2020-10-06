@@ -23,6 +23,7 @@ public class ModelPenguin extends ModelBase {
     public ModelPenguin() {
         this.textureWidth = 64;
         this.textureHeight = 64;
+
         this.Body = new ModelRenderer(this, 0, 0);
         this.Body.setRotationPoint(0.0F, 13.0F, 0.0F);
         this.Body.addBox(-5.0F, 0.0F, -4.0F, 10, 10, 8, 0.0F);

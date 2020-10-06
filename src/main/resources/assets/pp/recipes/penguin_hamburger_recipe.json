@@ -3,7 +3,7 @@
   "pattern":
   [
     "xxx",
-    "aaa",
+    "cal",
     "xxx"
   ],
   "key":
@@ -15,6 +15,14 @@
     "a":
     {
       "item": "pp:cooked_penguin_meat"
+    },
+    "l":
+    {
+      "item": "pp:lettuce"
+    },
+    "c":
+    {
+      "item": "pp:cheese"
     }
   },
   "result":
