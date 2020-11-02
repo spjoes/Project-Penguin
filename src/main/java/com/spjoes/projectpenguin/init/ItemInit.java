@@ -3,7 +3,7 @@ package com.spjoes.projectpenguin.init;
 import com.spjoes.projectpenguin.Main;
 import com.spjoes.projectpenguin.objects.armour.ArmourBase;
 import com.spjoes.projectpenguin.objects.items.*;
-import com.spjoes.projectpenguin.objects.items.food.ItemCustomFood;
+import com.spjoes.projectpenguin.objects.items.food.*;
 import com.spjoes.projectpenguin.objects.items.tools.*;
 import com.spjoes.projectpenguin.util.Reference;
 import net.minecraft.init.SoundEvents;
@@ -29,6 +29,8 @@ public class ItemInit {
     public static final Item TAB_ICON = new ItemTab("tab_icon");
     public static final Item HALF_PENGUIN_EGG_TOP = new ItemBase("half_penguin_egg", Main.PPTAB);
     public static final Item HALF_PENGUIN_EGG_BOTTOM = new ItemBase("half_penguin_egg_bottom", Main.PPTAB);
+    public static final Item PENGUIN_SWORD_BLADE = new ItemBase("penguin_sword_blade", Main.PPTAB);
+    public static final Item PENGUIN_SWORD_HANDLE = new ItemBase("penguin_sword_handle", Main.PPTAB);
 
 
     //Food
@@ -38,6 +40,13 @@ public class ItemInit {
     public static final Item PENGUIN_HAMBURGER = new ItemCustomFood("penguin_hamburger", 9, false);
     public static final Item LETTUCE = new ItemCustomFood("lettuce", 2, false);
     public static final Item CHEESE = new ItemCustomFood("cheese", 2, false);
+    public static final Item PEACH = new ItemCustomFood("peach", 5, false);
+
+    //Drinkable Foods
+    public static final Item PEACH_SMOOTHIE = new ItemPeachSmoothieDrinkableFood("peach_smoothie", 7, false);
+    public static final Item APPLE_SMOOTHIE = new ItemAppleSmoothieDrinkableFood("apple_smoothie", 8, false);
+    public static final Item CHOCOLATE_SMOOTHIE = new ItemChocolateSmoothieDrinkableFood("chocolate_smoothie", 4, false);
+    public static final Item WATERMELON_SMOOTHIE = new ItemWatermelonSmoothieDrinkableFood("watermelon_smoothie", 6, false);
 
 
     //tools

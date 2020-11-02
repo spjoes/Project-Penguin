@@ -1,8 +1,7 @@
 package com.spjoes.projectpenguin.util.handlers;
 
 import com.spjoes.projectpenguin.util.Reference;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
+import net.minecraft.util.*;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class SoundsHandler {

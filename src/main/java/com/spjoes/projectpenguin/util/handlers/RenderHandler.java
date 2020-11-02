@@ -35,6 +35,25 @@ public class RenderHandler {
                 return new RenderStickBug(manager);
             }
         });
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityEnergizedPenguin.class, new IRenderFactory<EntityEnergizedPenguin>()
+        {
+            @Override
+            public Render<? super EntityEnergizedPenguin> createRenderFor(RenderManager manager)
+            {
+                return new RenderEnergizedPenguin(manager);
+            }
+        });
+
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityEvilPenguin.class, new IRenderFactory<EntityEvilPenguin>()
+        {
+            @Override
+            public Render<? super EntityEvilPenguin> createRenderFor(RenderManager manager)
+            {
+                return new RenderEvilPenguin(manager);
+            }
+        });
     }
 
 

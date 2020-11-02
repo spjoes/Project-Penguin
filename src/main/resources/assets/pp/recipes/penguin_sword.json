@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " x ",
+    " - ",
+    " / "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "pp:penguin_sword_blade"
+    },
+    "-":
+    {
+      "item": "pp:penguin_sword_handle"
+    },
+    "/":
+    {
+      "item": "minecraft:stick"
+    }
+  },
+  "result":
+  {
+    "item": "pp:penguin_sword",
+    "count": 1
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "pools": [
+        {
+            "name": "EvilPenguinMain",
+            "rolls": {
+                "min": 1,
+                "max": 1
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 3,
+
+                    "name": "minecraft:redstone"
+                }
+            ]
+        },
+        {
+            "name": "EvilPenguinSpecial",
+            "rolls": {
+                "min": 1,
+                "max": 2
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 2,
+                    "name": "pp:penguin_meat"
+                }
+            ]
+        }
+    ]
+}

@@ -14,6 +14,8 @@ public class EntityInit
 {
     public static void registerEntities() {
         registerEntity("penguin", EntityPenguin.class, Reference.ENTITY_PENGUIN, 50, 16513532, 16488035);
+        registerEntity("energized_penguin", EntityEnergizedPenguin.class, Reference.ENTITY_ENERGIZED_PENGUIN, 50, 16776960, 16488035);
+        registerEntity("evil_penguin", EntityEvilPenguin.class, Reference.ENTITY_EVIL_PENGUIN, 50, 16776960, 16711680);
 
 
         // uncomment these to enable Forest Penguins and Bone Bugs (Stick Bugs)
@@ -31,6 +33,8 @@ public class EntityInit
     {
         EntityRegistry.registerModEntity(new ResourceLocation(MODID + ":" + name), entity, name, id, Main.instance, range, 1, true, color1, color2);
     }
+
+
 
 
 }

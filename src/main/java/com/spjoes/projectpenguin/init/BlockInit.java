@@ -13,6 +13,7 @@ public class BlockInit
     public static final List<Block> BLOCKS = new ArrayList<Block>();
 
     public static final Block PENGUIN_EGG = new BlockBase("penguin_egg", Material.WOOD, Main.PPTAB);
+    public static final Block SMOOTHIE_MACHINE = new BlockSmoothieMachine("smoothie_machine", Material.WOOD, Main.PPTAB);
     // public static final Block INCUBATOR_EMPTY = new BlockIncubator("incubator_empty", Material.WOOD, Main.PPTAB);
 
 }

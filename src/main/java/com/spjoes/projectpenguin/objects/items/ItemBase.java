@@ -17,6 +17,7 @@ public class ItemBase extends Item implements IHasModel
         ItemInit.ITEMS.add(this);
     }
 
+
     @Override
     public void registerModels()
     {

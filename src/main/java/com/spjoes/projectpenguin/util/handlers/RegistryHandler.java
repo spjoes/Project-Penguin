@@ -50,6 +50,7 @@ public class RegistryHandler {
     public static void preInitRegistries() {
 
         EntityInit.registerEntities();
+        TileEntitiesInit.registerTileEntities();
 
     }
 

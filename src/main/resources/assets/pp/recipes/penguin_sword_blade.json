@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "  m",
+    " f ",
+    "m  "
+  ],
+  "key":
+  {
+    "m":
+    {
+      "item": "pp:penguin_meat"
+    },
+    "f":
+    {
+      "item": "pp:penguin_fur"
+    }
+  },
+  "result":
+  {
+    "item": "pp:penguin_sword_blade",
+    "count": 1
+  }
+}

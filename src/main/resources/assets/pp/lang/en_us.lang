@@ -3,6 +3,8 @@ item.penguin_fur.name=Penguin Fur
 item.penguin_meat.name=Penguin Meat
 item.cooked_penguin_meat.name=Cooked Penguin Meat
 item.penguin_sword.name=Penguin Sword
+item.penguin_sword_handle.name=Penguin Sword Handle
+item.penguin_sword_blade.name=Penguin Sword Blade
 item.penguin_hamburger.name=Penguin Burger
 item.tab_icon.name=Project Penguin Creative Tab Icon
 item.half_penguin_egg.name=Top Half Of A Penguin Egg
@@ -10,6 +12,11 @@ item.half_penguin_egg_bottom.name=Bottom Half Of A Penguin Egg
 item.cheese.name=Cheese
 item.cheese_bat.name=Cheese Bat
 item.lettuce.name=Lettuce
+item.peach.name=Peach
+item.peach_smoothie.name=Peach Smoothie
+item.apple_smoothie.name=Apple Smoothie
+item.chocolate_smoothie.name=Chocolate Smoothie
+item.watermelon_smoothie.name=Watermelon Smoothie
 
 item.helmet_fur.name=Fur Helmet
 item.chestplate_fur.name=Fur Chestplate
@@ -18,9 +25,12 @@ item.boots_fur.name=Fur Boots
 
 tile.penguin_egg.name=Penguin Egg
 tile.incubator_empty.name=Incubator
+tile.smoothie_machine.name=Smoothie Maker
 
 entity.penguin.name=Penguin
+entity.energized_penguin.name=Energized Penguin
 entity.forest_penguin.name=Forest Penguin
+entity.evil_penguin.name=Evil Penguin
 entity.stick_bug.name=Bone Bug
 entity.seal.name=Seal
 

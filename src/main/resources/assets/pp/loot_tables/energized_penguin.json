@@ -1,0 +1,33 @@
+{
+    "pools": [
+        {
+            "name": "EnergizedPenguinMain",
+            "rolls": {
+                "min": 1,
+                "max": 2
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 1,
+                    "name": "minecraft:gold_ingot"
+                }
+            ]
+        },
+        {
+            "name": "EnergizedPenguin2",
+            "rolls": {
+                "min": 1,
+                "max": 2
+            },
+            "entries": [
+                {
+                    "type": "item",
+                    "weight": 3,
+
+                    "name": "pp:cooked_penguin_meat"
+                }
+            ]
+        }
+    ]
+}

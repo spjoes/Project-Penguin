@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "sss",
+    "sws",
+    "sss"
+  ],
+  "key":
+  {
+    "s":
+    {
+      "item": "minecraft:wheat_seeds"
+    },
+    "w":
+    {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result":
+  {
+    "item": "pp:lettuce",
+    "count": 1
+  }
+}

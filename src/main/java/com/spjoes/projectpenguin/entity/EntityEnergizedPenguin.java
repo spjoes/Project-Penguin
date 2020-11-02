@@ -6,8 +6,11 @@ import com.spjoes.projectpenguin.init.BlockInit;
 import com.spjoes.projectpenguin.util.handlers.LootTableHandler;
 import com.spjoes.projectpenguin.util.handlers.SoundsHandler;
 import net.minecraft.entity.EntityAgeable;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.*;
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.monster.EntityPolarBear;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -15,14 +18,19 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.util.*;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 import javax.annotation.Nullable;
 import java.util.Set;
 import java.util.UUID;
 
-public class EntityForestPenguin extends EntityPolarBear {
+public class EntityEnergizedPenguin extends EntityPolarBear {
 
 
     private static final Set<Item> TEMPTATION_ITEMS = Sets.newHashSet(Items.FISH);
@@ -31,16 +39,19 @@ public class EntityForestPenguin extends EntityPolarBear {
 
 
 
-    public EntityForestPenguin(World worldIn) {
+    public EntityEnergizedPenguin(World worldIn) {
         super(worldIn);
         this.setSize(0.9F, 1.2F);
+        this.isImmuneToFire = true;
+        this.setPathPriority(PathNodeType.WATER, -1.0F);
+        // this.DiesInWater(this);
     }
 
     @Override
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(8.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(15.0D);
     }
 
 
@@ -166,32 +177,39 @@ public class EntityForestPenguin extends EntityPolarBear {
 
     @Override
     protected void initEntityAI(){
-        this.tasks.addTask(0, new EntityAISwimming(this));
+        this.tasks.addTask(0, new EntityAIWanderAvoidWater(this, 0.6D));
         this.tasks.addTask(2, new EntityAIMate(this, 1.25D));
         this.tasks.addTask(3, new EntityAITempt(this, 0.8D, Items.FISH, false));
         this.tasks.addTask(4, new EntityAIFollowParent(this, 0.9D));
-        this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
         this.tasks.addTask(5, new EntityAILookIdle(this));
-        this.tasks.addTask(7, new EntityAIWander(this, 0.6D));
+        this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
     }
 
     @Override
     public void onDeath(DamageSource cause) {
         super.onDeath(cause);
-        if (!world.isRemote && !this.isInLove()) {
-            if (this.rand.nextInt(12) == 0) {
-                ItemStack stack = new ItemStack(BlockInit.PENGUIN_EGG);
-                this.entityDropItem(stack, 0.5F);
+
+        if (!this.world.isRemote && !this.isDead)
+        {
+            EntityLightningBolt entityLightningBolt = new EntityLightningBolt(this.world, this.posY, this.posZ, this.posX, false);
+            entityLightningBolt.hurtResistantTime = 35;
+            entityLightningBolt.setLocationAndAngles(this.posX, this.posY, this.posZ, this.rotationYaw, this.rotationPitch);
+
+            if (this.hasCustomName())
+            {
+                entityLightningBolt.setCustomNameTag(this.getCustomNameTag());
+                entityLightningBolt.setAlwaysRenderNameTag(this.getAlwaysRenderNameTag());
             }
+
+            this.world.addWeatherEffect(entityLightningBolt);
+            this.setDead();
         }
     }
 
 
-
-
     @Override
     public EntityPolarBear createChild(EntityAgeable ageable) {
-        return new EntityForestPenguin(this.world);
+        return new EntityEnergizedPenguin(this.world);
     }
 
     public float getEyeHeight()
@@ -201,7 +219,7 @@ public class EntityForestPenguin extends EntityPolarBear {
 
     @Override
     protected ResourceLocation getLootTable() {
-        return LootTableHandler.FOREST_PENGUIN;
+        return LootTableHandler.ENERGIZED_PENGUIN;
     }
 
     @Override

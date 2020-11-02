@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.Mod.*;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.*;
 
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions=Reference.MCVER)
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions=Reference.MCVER, updateJSON="https://github.com/spjoes/Project-Penguin/raw/master/update.json")
 public class Main {
 
     @Instance
@@ -35,6 +35,8 @@ public class Main {
     }
 
     @EventHandler
-    public static void postInit(FMLPostInitializationEvent event){}
+    public static void postInit(FMLPostInitializationEvent event){
+
+    }
 
 }
