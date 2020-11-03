@@ -1,0 +1,12 @@
+{
+	"parent": "block/orientable",
+	"textures": {
+		"particle": "pp:blocks/smoothie_machine_v2_side",
+		"up": "pp:blocks/smoothie_machine_v2_side",
+		"down": "pp:blocks/smoothie_machine_v2_side",
+		"north": "pp:blocks/smoothie_machine_v2_front_on",
+		"east": "pp:blocks/smoothie_machine_v2_side",
+		"south": "pp:blocks/smoothie_machine_v2_side",
+		"west": "pp:blocks/smoothie_machine_v2_side"
+	}
+}

@@ -12,8 +12,8 @@ item.half_penguin_egg_bottom.name=Bottom Half Of A Penguin Egg
 item.cheese.name=Cheese
 item.cheese_bat.name=Cheese Bat
 item.lettuce.name=Lettuce
-item.peach.name=Peach
-item.peach_smoothie.name=Peach Smoothie
+item.strawberry.name=Strawberry
+item.strawberry_smoothie.name=Strawberry Smoothie
 item.apple_smoothie.name=Apple Smoothie
 item.chocolate_smoothie.name=Chocolate Smoothie
 item.watermelon_smoothie.name=Watermelon Smoothie
@@ -26,6 +26,7 @@ item.boots_fur.name=Fur Boots
 tile.penguin_egg.name=Penguin Egg
 tile.incubator_empty.name=Incubator
 tile.smoothie_machine.name=Smoothie Maker
+tile.smoothie_machine_v2.name=Smoothie Maker V2
 
 entity.penguin.name=Penguin
 entity.energized_penguin.name=Energized Penguin
@@ -39,3 +40,5 @@ entity.penguin.hurt=Penguin Hurt
 entity.penguin.death=Penguin Died
 
 itemGroup.pptab=Project Penguin
+
+container.smoothie_machine_v2=Smoothie Machine V2

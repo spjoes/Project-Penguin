@@ -59,7 +59,7 @@ public class BlockSmoothieMachine extends Block implements IHasModel
 
             if (playerIn.inventory.getCurrentItem() != null) {
 
-                if (playerIn.inventory.getCurrentItem().getItem() == ItemInit.PEACH) {
+                if (playerIn.inventory.getCurrentItem().getItem() == ItemInit.STRAWBERRY) {
 
 
                     playerIn.inventory.decrStackSize(playerIn.inventory.currentItem, 1);
@@ -68,10 +68,10 @@ public class BlockSmoothieMachine extends Block implements IHasModel
 //                        ((TileEntitySmoothieMachine) te).startBlending();
 //                    }
 
-                    playerIn.sendMessage(new TextComponentString("Starting Peach Smoothie Create Process .Debug"));
+                    playerIn.sendMessage(new TextComponentString("Starting Strawberry Smoothie Create Process .Debug"));
 
 
-                    smoothieID = "peach";
+                    smoothieID = "strawberry";
                     SmoothieCreationComplete(playerIn);
                 }
 
@@ -123,8 +123,8 @@ public class BlockSmoothieMachine extends Block implements IHasModel
 
     public void SmoothieCreationComplete(EntityPlayer playerIn) {
 
-        if(smoothieID == "peach") {
-            ItemStack stackstack = new ItemStack(ItemInit.PEACH_SMOOTHIE);
+        if(smoothieID == "strawberry") {
+            ItemStack stackstack = new ItemStack(ItemInit.STRAWBERRY_SMOOTHIE);
             playerIn.inventory.addItemStackToInventory(stackstack);
         }
 

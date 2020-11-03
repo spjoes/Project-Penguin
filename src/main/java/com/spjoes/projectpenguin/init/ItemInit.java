@@ -40,10 +40,10 @@ public class ItemInit {
     public static final Item PENGUIN_HAMBURGER = new ItemCustomFood("penguin_hamburger", 9, false);
     public static final Item LETTUCE = new ItemCustomFood("lettuce", 2, false);
     public static final Item CHEESE = new ItemCustomFood("cheese", 2, false);
-    public static final Item PEACH = new ItemCustomFood("peach", 5, false);
+    public static final Item STRAWBERRY = new ItemCustomFood("strawberry", 5, false);
 
     //Drinkable Foods
-    public static final Item PEACH_SMOOTHIE = new ItemPeachSmoothieDrinkableFood("peach_smoothie", 7, false);
+    public static final Item STRAWBERRY_SMOOTHIE = new ItemPeachSmoothieDrinkableFood("strawberry_smoothie", 7, false);
     public static final Item APPLE_SMOOTHIE = new ItemAppleSmoothieDrinkableFood("apple_smoothie", 8, false);
     public static final Item CHOCOLATE_SMOOTHIE = new ItemChocolateSmoothieDrinkableFood("chocolate_smoothie", 4, false);
     public static final Item WATERMELON_SMOOTHIE = new ItemWatermelonSmoothieDrinkableFood("watermelon_smoothie", 6, false);

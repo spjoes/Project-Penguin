@@ -14,6 +14,7 @@ public class BlockInit
 
     public static final Block PENGUIN_EGG = new BlockBase("penguin_egg", Material.WOOD, Main.PPTAB);
     public static final Block SMOOTHIE_MACHINE = new BlockSmoothieMachine("smoothie_machine", Material.WOOD, Main.PPTAB);
+    public static final Block SMOOTHIE_MACHINE_V2 = new BlockSmoothieMachineV2("smoothie_machine_v2");
     // public static final Block INCUBATOR_EMPTY = new BlockIncubator("incubator_empty", Material.WOOD, Main.PPTAB);
 
 }

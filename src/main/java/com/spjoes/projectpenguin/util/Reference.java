@@ -17,5 +17,8 @@ public class Reference {
     public static final int ENTITY_ENERGIZED_PENGUIN = 123;
     public static final int ENTITY_EVIL_PENGUIN = 124;
 //    public static final int ENTITY_SEAL = 125;
+
+
+    public static final int GUI_SMOOTHIE_MACHINE_V2 = 0;
 }
 
